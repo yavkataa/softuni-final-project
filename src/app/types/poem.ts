@@ -4,5 +4,5 @@ export interface Poem {
     title: string,
     _id: string,
     _ownerId: string
-    authorName: string,
+    authorName: string
 }

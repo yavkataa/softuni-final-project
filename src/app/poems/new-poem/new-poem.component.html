@@ -1,0 +1,24 @@
+<form #newPoemForm="ngForm" (ngSubmit)="submitHandler()">
+    <div class="input">
+        <p>Title: </p>
+        <input type="text" id="title" name="title" #poemTitleInput ngModel>
+    </div>
+    
+    <div class="input">
+        <p> Summary: </p>
+        <input type="text" id="summary" name="summary" #poemSummaryInput="ngModel" ngModel>
+    </div>
+    
+    <div class="input">
+        <p>Content</p>    
+        <textarea type="text" id="content" name="content" #poemContentInput="ngModel" ngModel cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="input">
+        <p>Author:</p>
+        <input type="text" id="author" name="author" #poemAuthorInput="ngModel" ngModel>    
+    </div>
+
+    
+    <button>Submit</button>
+</form>
