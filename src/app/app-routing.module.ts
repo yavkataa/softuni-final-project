@@ -19,11 +19,7 @@ const routes: Routes = [
     path: 'users',
     component: UserComponent
   },
-  {
-    path: 'new-poem',
-    component: NewPoemComponent
-  }
-];
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

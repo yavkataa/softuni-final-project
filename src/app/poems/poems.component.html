@@ -1,6 +1,6 @@
 <div *ngIf="isLoading">Loading poems...</div>
 <div class="cards">
-    <app-poem-card *ngFor="let poem of poems" [data]="poem">
+    <app-poem-card *ngFor="let poem of poems" [data]="poem" [routerLink]="poem._id">
     </app-poem-card>
 </div>
 

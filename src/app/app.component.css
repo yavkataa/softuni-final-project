@@ -1,6 +1,5 @@
 nav > .button {
     max-width: fit-content;
-    border: 1px solid black;
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
@@ -16,4 +15,5 @@ nav > .button:hover {
     color: white;
     animation-name: fade;
     animation-duration: 100ms;
+    cursor: pointer;
 } 
