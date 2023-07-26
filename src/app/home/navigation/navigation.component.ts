@@ -1,0 +1,24 @@
+import { Component, OnChanges } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { UserService } from 'src/app/user/user.service';
+
+@Component({
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.css']
+})
+export class NavigationComponent {
+  constructor(public userService: UserService, private router: Router, private api: ApiService) {}
+
+  logout():void {
+    this.userService.accessToken = null;
+        this.userService.userEmail = null;
+        this.userService.userId = null;
+        this.userService.isLoggedIn = false;
+        this.api.clearSessionData();
+        console.log('Logout successful!');
+        this.router.navigate(['/']);
+
+  }
+}

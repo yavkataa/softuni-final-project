@@ -12,6 +12,9 @@ import { NewPoemComponent } from './poems/new-poem/new-poem.component';
 import { FormsModule } from '@angular/forms';
 import { PoemRoutingModule } from './poems/poems-routing.module';
 import { PoemComponent } from './poems/poem/poem.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { PoemComponent } from './poems/poem/poem.component';
     HomeComponent,
     PoemCardComponent,
     NewPoemComponent,
-    PoemComponent
+    PoemComponent,
+    LoginComponent,
+    RegisterComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

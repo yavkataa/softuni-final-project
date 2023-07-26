@@ -4,6 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { PoemsComponent } from './poems/poems.component';
 import { UserComponent } from './user/user/user.component';
 import { NewPoemComponent } from './poems/new-poem/new-poem.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthActivate } from './home/guard/auth.activate';
 
 const routes: Routes = [
   {
@@ -17,8 +20,17 @@ const routes: Routes = [
   },
   {
     path: 'users',
-    component: UserComponent
+    component: UserComponent,
+    canActivate: [AuthActivate]
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  }
  ];
 
 @NgModule({

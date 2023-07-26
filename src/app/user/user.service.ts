@@ -1,13 +1,21 @@
 import { Injectable, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { ApiService } from '../api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService implements OnInit {
-  constructor(private http: HttpClient) {     
+
+  accessToken: string | null = null;
+  userId: string | null = null;
+  userEmail: string | null = null;
+  isLoggedIn: boolean = false;
+
+  constructor(private api: ApiService) {     
   }
 
-  ngOnInit(): void {
-  }    
+  ngOnInit(): void {    
+  }
+
+  
 }

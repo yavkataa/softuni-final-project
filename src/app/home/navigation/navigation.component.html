@@ -1,0 +1,9 @@
+<nav>
+    <div class="button" routerLink="/">Home</div>
+    <div class="button" routerLink="/poems">Poems</div>
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/new-poem">New Poem</div>
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/users">Authors</div>
+    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/login">Login</div>
+    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/register">Register</div>
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/" (click)="logout()">Logout</div>
+</nav>
