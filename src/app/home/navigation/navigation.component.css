@@ -17,3 +17,30 @@ nav > .button:hover {
     animation-duration: 100ms;
     cursor: pointer;
 } 
+
+@keyframes message-box-slide {
+    from {
+        height: 0px; 
+        background-color: white;
+    }
+    to {
+        height: 15px;
+        background-color: lightgray;
+    }
+}
+
+.message-box {
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    animation-name: message-box-slide;
+    border-radius: 10px;
+    animation-duration: 200ms;
+    background-color: lightgray;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.message-box:hover {
+    cursor: pointer;
+}

@@ -15,6 +15,7 @@ import { PoemComponent } from './poems/poem/poem.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
+/* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { NavigationComponent } from './home/navigation/navigation.component';
     PoemRoutingModule
     
   ],
-  providers: [],
+  providers: [/* appInterceptorProvider */],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

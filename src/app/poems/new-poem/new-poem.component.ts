@@ -1,5 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-new-poem',
@@ -18,10 +21,18 @@ export class NewPoemComponent {
       return;
     };
 
-    const value: {title: string, summary: string, content: string, author: string} = form.value;
-    console.log(value.title);
-    console.log(value.summary);
-    console.log(value.content);
-    console.log(value.author);
+    let submitData: {title: string, summary: string, content: string, authorName: string} = form.value;
+
+    this.api.storePoem(submitData).subscribe((response) => {
+      this.router.navigate([`/poems/${response._id}`]);
+      this.userService.message = "Posted successfully!";
+      setTimeout(() => {
+        this.userService.message = null;
+      }, 3000);
+    })
+  }
+
+  constructor(private api: ApiService, private router: Router, private userService: UserService) {
+      
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { UserService } from 'src/app/user/user.service';
@@ -19,6 +19,13 @@ export class NavigationComponent {
         this.api.clearSessionData();
         console.log('Logout successful!');
         this.router.navigate(['/']);
+        this.userService.message='Logged out successfully!';
+        setTimeout(() => {
+          this.userService.message = null;
+        }, 3000)
+  }
 
+  clearMessage(): void {
+    this.userService.message = null;
   }
 }

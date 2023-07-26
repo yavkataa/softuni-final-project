@@ -7,3 +7,4 @@
     <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/register">Register</div>
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/" (click)="logout()">Logout</div>
 </nav>
+<div *ngIf="this.userService.message" class="message-box" (click)="clearMessage()">{{this.userService.message}}</div>

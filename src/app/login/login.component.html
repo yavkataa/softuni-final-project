@@ -1,20 +1,20 @@
 <form #loginForm="ngForm" (ngSubmit)="submitHandler()">
     <!-- Email -->
-    <div class="form-group">
-        <label for="email">Email</label>
+    <div class="form-group" class="inputField">
+        <p for="email">Email: </p>
         <input type="email" id="email" name="email" ngModel email required #emailInput="ngModel"/>
     </div>
 
     <!-- Email error message -->
-    <div *ngIf="emailInput.touched">
+    <div *ngIf="emailInput.touched" class="messageField">
         <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
         <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
     </div>
     
 
     <!-- Password -->
-    <div class="form-group">
-        <label for="password">Password</label>
+    <div class="form-group" class="inputField">
+        <p>Password: </p>
         <input 
         type="password"
         id="password" 
@@ -26,5 +26,5 @@
 
    
     
-    <button>Login</button>
+    <button class="inputField">Login</button>
 </form>
