@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PoemsComponent } from './poems/poems.component';
-import { UserComponent } from './user/user/user.component';
-import { NewPoemComponent } from './poems/new-poem/new-poem.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthActivate } from './home/guard/auth.activate';
+import { AuthLoginActivate } from './home/guard/auth.login.activate';
 
 const routes: Routes = [
   {
@@ -17,19 +15,16 @@ const routes: Routes = [
   {
     path: 'poems',
     component: PoemsComponent
-  },
-  {
-    path: 'users',
-    component: UserComponent,
-    canActivate: [AuthActivate]
-  },
+  },  
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [AuthLoginActivate]
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [AuthLoginActivate]
   }
  ];
 

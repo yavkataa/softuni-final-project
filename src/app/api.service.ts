@@ -15,6 +15,10 @@ export class ApiService {
     return this.http.get<Poem[]>(`${API_URL}/poems`);
   }
 
+  getUserPoems(id: string | null): Observable<Poem[]> {
+    return this.http.get<Poem[]>(`${API_URL}/poems?where=_ownerId%3D%22${id}%22`);
+  }
+
   getPoem(id: string): Observable<Poem> {
     return this.http.get<Poem>(`${API_URL}/poems/${id}`);
   }
@@ -28,23 +32,23 @@ export class ApiService {
   }
 
   dataSave(key: string, value: string): void {
-    sessionStorage.setItem(key, value);
+    localStorage.setItem(key, value);
   }
 
   clearSessionData(): void {
-    sessionStorage.removeItem('accessToken');
-    sessionStorage.removeItem('userEmail');
-    sessionStorage.removeItem('userId');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userId');
   }
 
   storePoem(inputData: {}): Observable<any> {
     let requestData: any = inputData; 
-    requestData['_ownerId'] = sessionStorage.getItem('userId');
+    requestData['_ownerId'] = localStorage.getItem('userId');
     console.log(requestData);
 
     const headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
-    .set('X-Authorization', '' + sessionStorage.getItem('accessToken'));
+    .set('X-Authorization', '' + localStorage.getItem('accessToken'));
 
       console.log(headers);
     return this.http.post(`${API_URL}/poems`, requestData, {'headers': headers});

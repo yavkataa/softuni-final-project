@@ -5,6 +5,7 @@ import { PoemComponent } from './poem/poem.component';
 import { PoemsComponent } from './poems.component';
 import { HomeComponent } from '../home/home.component';
 import { AuthActivate } from '../home/guard/auth.activate';
+import { MyPoemsComponent } from './my-poems/my-poems.component';
 
 
 const routes: Routes = [
@@ -22,9 +23,19 @@ const routes: Routes = [
             canActivate: [AuthActivate]
         },
         {
+            path: "my-poems",
+            component: MyPoemsComponent,
+            canActivate: [AuthActivate]
+        },    
+        {
             path: ':id',
             component: PoemComponent
-        },        
+        },
+        {
+            path: 'my-poems/:id',
+            component: PoemComponent
+        },
+            
         
     ]    
   },  

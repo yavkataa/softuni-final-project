@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (sessionStorage.getItem('accessToken')) {
+    if (localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = true;
     }
   }

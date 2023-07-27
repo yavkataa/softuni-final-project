@@ -15,6 +15,7 @@ import { PoemComponent } from './poems/poem/poem.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
+import { MyPoemsComponent } from './poems/my-poems/my-poems.component';
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NavigationComponent } from './home/navigation/navigation.component';
     PoemComponent,
     LoginComponent,
     RegisterComponent,
-    NavigationComponent
+    NavigationComponent,
+    MyPoemsComponent
   ],
   imports: [
     BrowserModule,

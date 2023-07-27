@@ -29,6 +29,11 @@ export class NewPoemComponent {
       setTimeout(() => {
         this.userService.message = null;
       }, 3000);
+    }, (error) => {
+      this.userService.message = error.error.message;
+      setTimeout(() => {
+        this.userService.message = null;
+      }, 3000);
     })
   }
 

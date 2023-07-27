@@ -35,3 +35,15 @@ h1 {
     text-align: center;
 }
 
+#content {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+h1 {
+    overflow: hidden;
+}
+
+#Author {
+    overflow: hidden;
+} 
