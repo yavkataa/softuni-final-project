@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { Poem } from '../../types/poem'
+import { Poem } from '../../types/poem';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  constructor(private userService: UserService) {
-    
-  }
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {
-    
-  }  
+  ngOnInit(): void {}
 }

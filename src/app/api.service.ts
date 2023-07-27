@@ -1,22 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { Poem } from "./types/poem"
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Poem } from './types/poem';
 import { Observable } from 'rxjs';
-import { API_STORE_URL, API_URL, LOGIN_STATUS_URL, LOGIN_URL } from './app-config';
+import {
+  API_STORE_URL,
+  API_URL,
+  LOGIN_STATUS_URL,
+  LOGIN_URL,
+} from './app-config';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getPoems(): Observable<Poem[]> {
     return this.http.get<Poem[]>(`${API_URL}/poems`);
   }
 
   getUserPoems(id: string | null): Observable<Poem[]> {
-    return this.http.get<Poem[]>(`${API_URL}/poems?where=_ownerId%3D%22${id}%22`);
+    return this.http.get<Poem[]>(
+      `${API_URL}/poems?where=_ownerId%3D%22${id}%22`
+    );
   }
 
   getPoem(id: string): Observable<Poem> {
@@ -24,7 +30,7 @@ export class ApiService {
   }
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post(`${LOGIN_URL}`, {email: email, password: password});
+    return this.http.post(`${LOGIN_URL}`, { email: email, password: password });
   }
   dataSave(key: string, value: string): void {
     localStorage.setItem(key, value);
@@ -34,25 +40,30 @@ export class ApiService {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userId');
+    localStorage.removeItem('');
   }
 
   getProfileInfo(): Observable<any> {
-    const headers = new HttpHeaders()
-    .set('X-Authorization', '' + localStorage.getItem('accessToken'));
-    return this.http.get(`${LOGIN_STATUS_URL}`,{'headers': headers});
+    const headers = new HttpHeaders().set(
+      'X-Authorization',
+      '' + localStorage.getItem('accessToken')
+    );
+    return this.http.get(`${LOGIN_STATUS_URL}`, { headers: headers });
   }
 
   storePoem(inputData: {}): Observable<any> {
-    let requestData: any = inputData; 
+    let requestData: any = inputData;
     requestData['_ownerId'] = localStorage.getItem('userId');
     requestData['username'] = localStorage.getItem('username');
     console.log(requestData);
 
     const headers = new HttpHeaders()
-    .set('Content-Type', 'application/json')
-    .set('X-Authorization', '' + localStorage.getItem('accessToken'));
+      .set('Content-Type', 'application/json')
+      .set('X-Authorization', '' + localStorage.getItem('accessToken'));
 
-      console.log(headers);
-    return this.http.post(`${API_URL}/poems`, requestData, {'headers': headers});
+    console.log(headers);
+    return this.http.post(`${API_URL}/poems`, requestData, {
+      headers: headers,
+    });
   }
 }

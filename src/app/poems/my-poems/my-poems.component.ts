@@ -6,10 +6,9 @@ import { UserService } from 'src/app/user/user.service';
 @Component({
   selector: 'app-my-poems',
   templateUrl: './my-poems.component.html',
-  styleUrls: ['./my-poems.component.css']
+  styleUrls: ['./my-poems.component.css'],
 })
 export class MyPoemsComponent implements OnInit {
-
   poemsList: Poem[] = [];
   isLoading: boolean = false;
 
@@ -21,27 +20,24 @@ export class MyPoemsComponent implements OnInit {
   }
 
   fetchMyPoems(userId: string | null): Poem[] | null {
-    if (userId!=null) {
-    const user = localStorage.getItem('userId');
-    this.isLoading = true;
-    this.api.getUserPoems(user).subscribe(
-      (response) => {
-        this.poemsList = response;
-        this.isLoading = false;
-      },
-       (error) => {        
-        this.isLoading = false;
-        this.userService.message = error.error.message;
-        setTimeout(() => {
-          this.userService.message = null;
-        }, 3000)
-       }
-    );
-    } else {
-      return null;
+    if (userId != null) {
+      const user = localStorage.getItem('userId');
+      this.isLoading = true;
+      this.api.getUserPoems(user).subscribe({
+        next: (response) => {
+          this.poemsList = response;
+          this.isLoading = false;
+        },
+        error: (error) => {
+          this.isLoading = false;
+          this.userService.message = error.error.message;
+          setTimeout(() => {
+            this.userService.message = null;
+          }, 3000);
+        },
+      });
     }
 
     return null;
-
   }
 }
