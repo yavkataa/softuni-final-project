@@ -55,3 +55,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
 } 
+
+.active-link {
+    background-color: lightgray;
+}

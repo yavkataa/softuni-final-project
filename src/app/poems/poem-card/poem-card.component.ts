@@ -12,7 +12,7 @@ export class PoemCardComponent implements OnChanges {
     title: '',
     summary: '',
     content: '',
-    authorName: '',
+    username: '',
     _id: '',
     _ownerId: ''
   };

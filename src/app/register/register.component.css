@@ -24,6 +24,7 @@ button:hover {
     animation-name: fade;
     animation-duration: 100ms;
     background-color: lightgray;
+    cursor: pointer;
 }
 
 label {

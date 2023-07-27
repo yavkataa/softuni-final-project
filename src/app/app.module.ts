@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { MyPoemsComponent } from './poems/my-poems/my-poems.component';
+import { ProfileComponent } from './profile/profile.component';
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MyPoemsComponent } from './poems/my-poems/my-poems.component';
     LoginComponent,
     RegisterComponent,
     NavigationComponent,
-    MyPoemsComponent
+    MyPoemsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
 <nav>
-    <div class="button" routerLink="/">Home</div>
-    <div class="button" routerLink="/poems">Poems</div>
-    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/new-poem">New Poem</div>
-    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/my-poems">My Poems</div>
-    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/login">Login</div>
-    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/register">Register</div>
+    <div class="button" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</div>
+    <div class="button" routerLink="/poems" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Poems</div>
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/new-poem" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">New Poem</div>
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/my-poems" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >My Poems</div>
+    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/login" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Login</div>
+    <div *ngIf="!this.userService.isLoggedIn" class="button" routerLink="/register" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Register</div>    
+    <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/profile" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Profile</div>
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/" (click)="logout()">Logout</div>
 </nav>
 <div *ngIf="this.userService.message" class="message-box" (click)="clearMessage()">{{this.userService.message}}</div>

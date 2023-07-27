@@ -26,11 +26,6 @@ export class ApiService {
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${LOGIN_URL}`, {email: email, password: password});
   }
-
-  getUserDetails(token: string) {
-    return this.http.get(`${LOGIN_STATUS_URL}`);
-  }
-
   dataSave(key: string, value: string): void {
     localStorage.setItem(key, value);
   }
@@ -41,9 +36,16 @@ export class ApiService {
     localStorage.removeItem('userId');
   }
 
+  getProfileInfo(): Observable<any> {
+    const headers = new HttpHeaders()
+    .set('X-Authorization', '' + localStorage.getItem('accessToken'));
+    return this.http.get(`${LOGIN_STATUS_URL}`,{'headers': headers});
+  }
+
   storePoem(inputData: {}): Observable<any> {
     let requestData: any = inputData; 
     requestData['_ownerId'] = localStorage.getItem('userId');
+    requestData['username'] = localStorage.getItem('username');
     console.log(requestData);
 
     const headers = new HttpHeaders()

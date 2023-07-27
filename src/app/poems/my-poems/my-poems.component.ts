@@ -27,7 +27,6 @@ export class MyPoemsComponent implements OnInit {
     this.api.getUserPoems(user).subscribe(
       (response) => {
         this.poemsList = response;
-        console.log(response);
         this.isLoading = false;
       },
        (error) => {        

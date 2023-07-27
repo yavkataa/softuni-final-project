@@ -21,7 +21,7 @@ export class NewPoemComponent {
       return;
     };
 
-    let submitData: {title: string, summary: string, content: string, authorName: string} = form.value;
+    let submitData: {title: string, summary: string, content: string} = form.value;
 
     this.api.storePoem(submitData).subscribe((response) => {
       this.router.navigate([`/poems/${response._id}`]);

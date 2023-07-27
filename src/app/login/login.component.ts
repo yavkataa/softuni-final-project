@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
         this.api.dataSave('accessToken', response.accessToken);
         this.api.dataSave('userEmail', response.email);
         this.api.dataSave('userId', response._id);
+        this.api.dataSave('username', response.username);
 
         console.log('Login successful!');
         this.router.navigate(['/']);
