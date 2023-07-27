@@ -1428,11 +1428,14 @@
         email: 'peter@abv.bg',
         hashedPassword:
           '83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1',
+        username: 'Pesho',
+
       },
       '847ec027-f659-4086-8032-5173e2f9c93a': {
         email: 'john@abv.bg',
         hashedPassword:
           '83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1',
+        username: 'Johnny Boy',
       },
     },
     sessions: {},
@@ -1488,28 +1491,28 @@
         title: "Live, laugh, love",
         summary: "A short poem about life.",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        authorName: "Peugeot"
+        username: "Pesho"
       },
       "1840a313-225c-416a-81ca-9954e5609l7c": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
         title: "About a girl",
         summary: "A poem about a person or something.",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        authorName: "Peugeot"
+        content: "I need an easy friend, I do, with an ear to lend, I do think you fit this shoe, I do, but you have a clue, I'll take advantage while, You hang me out to dry, But I can't see you every night, Free (I do, I do), I'm standing in your line, I do hope you have the time, I do pick a number too, I do keep a date with you, I'll take advantage while, You hang me out to dry, But I can't see you every night, Free, I need an easy friend, I do, with an ear to lend, I do think you fit this shoe, I do, but you have a clue, I'll take advantage while, You hang me out to dry, But I can't see you every night, No, I can't see you every night, Free, I do, I do, I do, I do",
+        username: "Johnny Boy"
       },
       "18j0a313-225c-416a-81ca-9954e5609l7c": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         title: "Roses and whiskers",
         summary: "A poem about cats and plants.",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        authorName: "Peugeot"
+        username: "Pesho"
       },
       "a8j0a313-225c-416a-81ca-9954e5609l7c": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
         title: "Rose and whiskey",
         summary: "A poem about a particular friday night you wont forget.",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        authorName: "Peugeot"
+        username: "Johnny Boy"
       },
 
       
