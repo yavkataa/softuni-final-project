@@ -65,10 +65,28 @@ export class ApiService {
     console.log(headers);
     return this.http.post(`${API_URL}/poems`, requestData, {
       headers: headers,
-    });    
+    });
   }
 
-  registerUser(email: string, password: string, username: string): Observable<any> {
-    return this.http.post(`${REGISTER_URL}`, { email: email, password: password, username: username });
+  registerUser(
+    email: string,
+    password: string,
+    username: string
+  ): Observable<any> {
+    return this.http.post(`${REGISTER_URL}`, {
+      email: email,
+      password: password,
+      username: username,
+    });
+  }
+
+  deletePoem(id: string): Observable<any> {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('X-Authorization', '' + localStorage.getItem('accessToken'));
+
+    return this.http.delete(`${API_URL}/poems/${id}`, {
+      headers: headers,
+    });
   }
 }

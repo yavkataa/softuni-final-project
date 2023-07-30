@@ -1,7 +1,27 @@
 <div *ngIf="isLoading" class="loader">Loading poem...</div>
+
+<div class="controls">
+  <button
+    *ngIf="poem._ownerId == loggedInUser"
+    class="button"
+    class="inputField"
+    (click)="deletePoem()"
+  >
+    Delete Poem
+  </button>
+  <button
+    *ngIf="poem._ownerId == loggedInUser"
+    class="button"
+    class="inputField"
+    (click)="gotoEdit()"
+  >
+    Edit Poem
+  </button>
+</div>
+
 <div class="poem" *ngIf="poem">
-    <h1>{{poem.title}}</h1>
-    <h3>{{poem.summary}}</h3>    
-    <h5>Written by: {{poem.username}}</h5>
-    <div class="content">{{poem.content}}</div>
+  <h1>{{ poem.title }}</h1>
+  <h3>{{ poem.summary }}</h3>
+  <h5>Written by: {{ poem.username }}</h5>
+  <div class="content">{{ poem.content }}</div>
 </div>

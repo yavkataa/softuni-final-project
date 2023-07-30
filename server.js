@@ -1450,6 +1450,7 @@
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg",
         software: "Traditional",
         _createdOn: 1617194210928,
+        
       },
       "126777f5-3277-42ad-b874-76d043b069cb": {
         _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1491,7 +1492,14 @@
         title: "Live, laugh, love",
         summary: "A short poem about life.",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        username: "Pesho"
+        username: "Pesho",
+        comments: {
+          "1": {
+            username: "Pesho",
+            content: "Testcomment for girl with pearl earring",
+            _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
+          }
+        }
       },
       "1840a313-225c-416a-81ca-9954e5609l7c": {
         _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",

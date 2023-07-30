@@ -1,56 +1,84 @@
 <form #registerForm="ngForm" (ngSubmit)="submitHandler()">
-    <!-- Email -->
-    <div class="form-group" class="inputField">
-        <p>Email: </p>
-        <input type="email" id="email" name="email" ngModel email required #emailInput="ngModel"/>
+  <!-- Email -->
+  <div class="form-group" class="inputField">
+    <p>Email:</p>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      ngModel
+      email
+      required
+      #emailInput="ngModel"
+    />
+  </div>
+
+  <!-- Email error message -->
+  <div *ngIf="emailInput.touched" class="inputField">
+    <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+    <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
+  </div>
+
+  <div class="form-group" class="inputField">
+    <p>Username:</p>
+    <input
+      type="username"
+      id="username"
+      name="username"
+      ngModel
+      username
+      required
+      #usernameInput="ngModel"
+    />
+  </div>
+
+  <div *ngIf="usernameInput.touched" class="inputField">
+    <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
+  </div>
+
+  <!-- Password -->
+  <div class="form-group" class="inputField">
+    <div>
+      <p>Password:</p>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        ngModel
+        #passwordInput="ngModel"
+        required
+        minlength="6"
+      />
+    </div>
+    <p class="error" *ngIf="passwordInput.errors?.['minlength']">
+      Password must be at least
+      {{passwordInput.errors?.['minlength']['requiredLength']}} characters!
+    </p>
+
+    <div *ngIf="passwordInput.touched" class="inputField">
+      <div *ngIf="passwordInput.errors?.['required']">
+        Password is required!
+      </div>
     </div>
 
-    <!-- Email error message -->
-    <div *ngIf="emailInput.touched" class="inputField">
-        <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
-        <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
+    <div>
+      <p>Repeat password:</p>
+      <input
+        type="password"
+        id="rePassword"
+        ngModel
+        #rePasswordInput="ngModel"
+        required        
+        name="rePassword"
+      />
     </div>
 
-    <div class="form-group" class="inputField">
-        <p>Username: </p>
-        <input type="username" id="username" name="username" ngModel username required #usernameInput="ngModel"/>
-    </div>    
-
-    <div *ngIf="usernameInput.touched" class="inputField">
-        <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
+    <div  *ngIf="passwordInput.touched" class="inputField">
+      <div *ngIf="!passwordInput.errors?.['matchPasswordsValidator']">
+        Passwords must match!
+      </div>
     </div>
+  </div>
 
-    <!-- Password -->
-    <div class="form-group" class="inputField">
-        <div>
-            <p>Password: </p>
-            <input 
-            type="password"
-            id="password" 
-            name="password" 
-            ngModel 
-            #passwordInput="ngModel" 
-            required
-            />
-        </div>
-
-        <div *ngIf="passwordInput.touched" class="inputField">
-            <div *ngIf="passwordInput.errors?.['required']">Password is required!</div>
-        </div>
-
-        <div>
-            <p>Repeat password: </p>
-            <input 
-            type="password"
-            id="rePassword"
-            name="rePassword"
-            ngModel
-            #rePasswordInput="ngModel"
-            />
-        </div>
-    </div>
-
-   
-    
-    <button class="inputField">Register</button>
+  <button class="inputField">Register</button>
 </form>

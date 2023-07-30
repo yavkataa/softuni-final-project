@@ -3,6 +3,6 @@ export interface Poem {
     summary: string,
     title: string,
     _id: string,
-    _ownerId: string
-    username: string
+    _ownerId: string,
+    username: string,
 }

@@ -9,14 +9,14 @@ import { PoemsComponent } from './poems/poems.component';
 import { HomeComponent } from './home/home.component';
 import { PoemCardComponent } from './poems/poem-card/poem-card.component';
 import { NewPoemComponent } from './poems/new-poem/new-poem.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PoemRoutingModule } from './poems/poems-routing.module';
 import { PoemComponent } from './poems/poem/poem.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { MyPoemsComponent } from './poems/my-poems/my-poems.component';
-import { ProfileComponent } from './profile/profile.component';
+import { UserModule } from './user/user/user.module';
+import { EditPoemComponent } from './poems/edit-poem/edit-poem.component';
+
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
@@ -28,18 +28,19 @@ import { ProfileComponent } from './profile/profile.component';
     PoemCardComponent,
     NewPoemComponent,
     PoemComponent,
-    LoginComponent,
-    RegisterComponent,
     NavigationComponent,
     MyPoemsComponent,
-    ProfileComponent
+    EditPoemComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    PoemRoutingModule,    
     FormsModule,
-    PoemRoutingModule
+    ReactiveFormsModule,
+    UserModule
     
   ],
   providers: [/* appInterceptorProvider */],

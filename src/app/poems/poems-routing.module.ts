@@ -6,6 +6,7 @@ import { PoemsComponent } from './poems.component';
 import { HomeComponent } from '../home/home.component';
 import { AuthActivate } from '../home/guard/auth.activate';
 import { MyPoemsComponent } from './my-poems/my-poems.component';
+import { EditPoemComponent } from './edit-poem/edit-poem.component';
 
 
 const routes: Routes = [
@@ -32,9 +33,14 @@ const routes: Routes = [
             component: PoemComponent
         },
         {
+          path: 'edit-poem/:id',
+          component: EditPoemComponent
+        },
+        {
             path: 'my-poems/:id',
             component: PoemComponent
         },
+        
             
         
     ]    

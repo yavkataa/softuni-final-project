@@ -14,7 +14,7 @@ export class PoemCardComponent implements OnChanges {
     content: '',
     username: '',
     _id: '',
-    _ownerId: ''
+    _ownerId: '',
   };
 
   ngOnChanges(changes: SimpleChanges): void { 

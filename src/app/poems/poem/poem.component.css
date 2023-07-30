@@ -14,3 +14,36 @@ div {
 
     text-align: left;
 }
+
+button {
+    padding: 10px 100px;
+    border-radius: 15px;    
+    margin: 0 auto;
+    cursor: pointer;    
+    margin: 0 10px;
+    
+}
+
+button:hover {
+    animation-name: fade;
+    animation-duration: 100ms;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {background-color: white;}
+    to {background-color: lightgray;}
+}
+
+.inputField {
+    display: inline-block;
+    text-align: center;
+}
+
+.controls {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+
+}

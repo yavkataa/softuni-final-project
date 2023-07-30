@@ -37,7 +37,9 @@ h1 {
 
 #content {
     max-height: 250px;
-    overflow: hidden;
+    overflow: hidden;    
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
 }
 
 h1 {
