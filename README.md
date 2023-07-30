@@ -5,6 +5,4 @@ This is a poetry sharing webste application, aimed to let users register, read o
 As seen in https://github.com/softuni-practice-server/softuni-practice-server
 
 # Features
-Register/Login
-Create and Delete Poems
-Browse Poems
+Register/Login, Create and Delete Poems, Browse Poems
