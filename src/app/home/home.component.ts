@@ -8,11 +8,12 @@ import { UserService } from '../user/user.service';
 })
 export class HomeComponent implements OnInit {
   isLoggedIn: boolean = false;
-  constructor(private userService: UserService) {}
+  constructor(public userService: UserService) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = true;
+      this.userService.username = localStorage.getItem('username');
     }
   }
 }

@@ -1,4 +1,8 @@
-<div class="user-details">
+<div *ngIf="this.isLoading">
+    <p class="loader">Loading profile...</p>
+</div>
+
+<div class="user-details" *ngIf="!this.isLoading">    
     <div>
         <p class="title">Email: </p>
         <p>{{email}}</p>

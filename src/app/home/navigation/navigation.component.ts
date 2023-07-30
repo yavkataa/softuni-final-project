@@ -17,6 +17,7 @@ export class NavigationComponent implements OnInit {
 
   logout(): void {
     this.userService.isLoggedIn = false;
+    this.userService.username = null;
     this.api.clearSessionData();
     console.log('Logout successful!');
     this.router.navigate(['/']);

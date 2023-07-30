@@ -1,7 +1,7 @@
-<div *ngIf="isLoading">Loading poem...</div>
+<div *ngIf="isLoading" class="loader">Loading poem...</div>
 <div class="poem" *ngIf="poem">
     <h1>{{poem.title}}</h1>
     <h3>{{poem.summary}}</h3>    
     <h5>Written by: {{poem.username}}</h5>
-    <div>{{poem.content}}</div>
+    <div class="content">{{poem.content}}</div>
 </div>

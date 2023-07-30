@@ -23,6 +23,7 @@ export class NewPoemComponent {
 
     let submitData: { title: string; summary: string; content: string } =
       form.value;
+     
 
     this.api.storePoem(submitData).subscribe({
       next: (response) => {

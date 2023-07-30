@@ -1,4 +1,4 @@
-<div *ngIf="isLoading">Loading poems...</div>
+<div *ngIf="isLoading" class="loader">Loading poems...</div>
 <div class="cards">
     <app-poem-card *ngFor="let poem of poemsList" [data]="poem" [routerLink]="poem._id">
     </app-poem-card>

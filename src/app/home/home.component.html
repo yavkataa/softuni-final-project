@@ -1,1 +1,18 @@
-<p>Welcome to a website dedicated to sharing poetry!</p>
+<div class="container">
+  <p *ngIf="this.userService.username">
+    Hello <span routerLink="profile">{{ this.userService.username }}</span>!
+    We hope you're having a great day.
+  </p>
+  <div *ngIf="!this.userService.isLoggedIn">
+    <p>
+      Guests can browse poems, registered users can post their own poetry on the
+      website.
+    </p>
+    <p>
+      You can <span routerLink="login" class="highlight">Login</span> or
+      <span routerLink="register" class="highlight">Register</span> for an account.
+    </p>
+  </div>
+
+  <p>Welcome to Poetree, a website dedicated to sharing poetry.</p>
+</div>

@@ -1,4 +1,5 @@
 <nav>
+    <span class="website-title">Poetree</span>
     <div class="button" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</div>
     <div class="button" routerLink="/poems" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Poems</div>
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/poems/new-poem" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">New Poem</div>

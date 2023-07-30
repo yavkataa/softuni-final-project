@@ -11,14 +11,18 @@ export class ProfileComponent implements OnInit {
   username: string = '';
   email: string = '';
   userId: string = '';
+  isLoading: boolean = false;
   ngOnInit(): void {
+    this.isLoading = true;
     this.api.getProfileInfo().subscribe({
       next: (response) => {
+        this.isLoading = false;
         this.username = response.username;
         this.email = response.email;
         this.userId = response._id;
       },
       error: (error) => {
+        this.isLoading = false;
         this.userService.message = error.error.message;
         setTimeout(() => {
           this.userService.message = null;

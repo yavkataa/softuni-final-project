@@ -7,6 +7,7 @@ import { ApiService } from '../api.service';
 export class UserService {
   isLoggedIn: boolean = false;
   message: string | null = null;
+  username: string | null = null;
 
   constructor(private api: ApiService) {}
 }
