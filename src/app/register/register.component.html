@@ -29,11 +29,20 @@
       username
       required
       #usernameInput="ngModel"
+      minlength="4"
+      maxlength="20"
     />
   </div>
 
   <div *ngIf="usernameInput.touched" class="inputField">
     <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
+  </div>
+
+  <div *ngIf="usernameInput.touched" class="inputField">
+    <div *ngIf="usernameInput.errors?.['minlength']">Username must be 4 or more characters long!</div>
+  </div>
+  <div *ngIf="usernameInput.touched" class="inputField">
+    <div *ngIf="usernameInput.errors?.['maxlength']">Username must be 16 characters at most!</div>
   </div>
 
   <!-- Password -->
@@ -48,11 +57,15 @@
         #passwordInput="ngModel"
         required
         minlength="6"
+        maxlength="32"
       />
     </div>
     <p class="error" *ngIf="passwordInput.errors?.['minlength']">
       Password must be at least
       {{passwordInput.errors?.['minlength']['requiredLength']}} characters!
+    </p>
+    <p class="error" *ngIf="passwordInput.errors?.['maxlength']">
+      Password must be 32 characters at most!
     </p>
 
     <div *ngIf="passwordInput.touched" class="inputField">

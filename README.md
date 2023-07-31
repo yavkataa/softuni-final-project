@@ -3,6 +3,7 @@ This is a poetry sharing webste application, aimed to let users register, read o
 
 # Server used: Softuni Practice Server
 As seen in https://github.com/softuni-practice-server/softuni-practice-server
+To start the server, open CMD in root inventory and run "node server.js"
 
 # Features
 Register/Login, Create and Delete Poems, Browse Poems

@@ -31,11 +31,7 @@ const routes: Routes = [
         {
             path: ':id',
             component: PoemComponent
-        },
-        {
-          path: 'edit-poem/:id',
-          component: EditPoemComponent
-        },
+        },        
         {
             path: 'my-poems/:id',
             component: PoemComponent

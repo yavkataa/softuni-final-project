@@ -49,12 +49,7 @@ export class PoemComponent implements OnInit {
         }, 3000);
       },
     });
-  }
-
-  gotoEdit(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.router.navigate([`/poems/edit-poem/${id}`]);
-  }
+  } 
 
   deletePoem():void {
     const id = this.activatedRoute.snapshot.params['id'];

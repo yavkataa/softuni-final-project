@@ -55,14 +55,12 @@ export class ApiService {
   storePoem(inputData: {}): Observable<any> {
     let requestData: any = inputData;
     requestData['_ownerId'] = localStorage.getItem('userId');
-    requestData['username'] = localStorage.getItem('username');
-    console.log(requestData);
+    requestData['username'] = localStorage.getItem('username');    
 
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('X-Authorization', '' + localStorage.getItem('accessToken'));
-
-    console.log(headers);
+    
     return this.http.post(`${API_URL}/poems`, requestData, {
       headers: headers,
     });
