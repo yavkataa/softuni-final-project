@@ -28,16 +28,10 @@ export class NewPoemComponent {
     this.api.storePoem(submitData).subscribe({
       next: (response) => {
         this.router.navigate([`/poems/${response._id}`]);
-        this.userService.message = 'Posted successfully!';
-        setTimeout(() => {
-          this.userService.message = null;
-        }, 3000);
+        this.userService.showMessage('Posted successfully!');
       },
       error: (error) => {
-        this.userService.message = error.error.message;
-        setTimeout(() => {
-          this.userService.message = null;
-        }, 3000);
+        this.userService.showMessage(error.error.message);
       },
     });
   }

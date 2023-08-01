@@ -28,10 +28,7 @@ export class RegisterComponent {
     }
 
     if (form.value.password !== form.value.rePassword) {
-      this.userService.message = "The passwords don't match!";
-      setTimeout(() => {
-        this.userService.message = null;
-      },3000)
+      this.userService.showMessage("The passwords don't match!");
 
       return;
     }
@@ -58,17 +55,11 @@ export class RegisterComponent {
 
             console.log('Registered successfully!');
             this.router.navigate(['/']);
-            this.userService.message = 'Registered successfully!';
-            setTimeout(() => {
-              this.userService.message = null;
-            }, 3000);
+            this.userService.showMessage('Registered successfully!');
           }
         },
         error: (error) => {
-          this.userService.message = error.error.message;
-          setTimeout(() => {
-            this.userService.message = null;
-          }, 3000);
+          this.userService.showMessage(error.error.message);
         },
       });
   }

@@ -21,10 +21,8 @@ export class NavigationComponent implements OnInit {
     this.api.clearSessionData();
     console.log('Logout successful!');
     this.router.navigate(['/']);
-    this.userService.message = 'Logged out successfully!';
-    setTimeout(() => {
-      this.userService.message = null;
-    }, 3000);
+    this.userService.showMessage('Logged out successfully!');
+    
   }
 
   clearMessage(): void {

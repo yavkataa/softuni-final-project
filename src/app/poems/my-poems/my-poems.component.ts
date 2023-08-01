@@ -30,10 +30,7 @@ export class MyPoemsComponent implements OnInit {
         },
         error: (error) => {
           this.isLoading = false;
-          this.userService.message = error.error.message;
-          setTimeout(() => {
-            this.userService.message = null;
-          }, 3000);
+          this.userService.showMessage(error.error.message);
         },
       });
     }

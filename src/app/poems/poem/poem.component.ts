@@ -43,10 +43,7 @@ export class PoemComponent implements OnInit {
         this.isLoading = false;
       },
       error: (error) => {
-        this.userService.message = error.error.message;
-        setTimeout(() => {
-          this.userService.message = null;
-        }, 3000);
+        this.userService.showMessage(error.error.message);
       },
     });
   } 
@@ -56,17 +53,11 @@ export class PoemComponent implements OnInit {
     
     this.apiService.deletePoem(id).subscribe({
       next: (response) => {
-        this.userService.message = 'Poem deleted successfully!';
+        this.userService.showMessage('Poem deleted successfully!');
         this.router.navigate(['poems/my-poems']);
-        setTimeout(() => {
-          this.userService.message = null;
-        },3000)
       }, 
       error: (error) => {
-        this.userService.message = error.error.message;
-        setTimeout(() => {
-          this.userService.message = null;
-        },3000)
+        this.userService.showMessage(error.error.message);
       }
     })
   }

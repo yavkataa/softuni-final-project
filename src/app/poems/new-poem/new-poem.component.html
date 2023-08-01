@@ -1,17 +1,41 @@
 <form #newPoemForm="ngForm" (ngSubmit)="submitHandler()">
-    <div class="form-group" class="inputField">
-        <p>Poem title: </p>
-        <input type="text" id="title" name="title" #poemTitleInput ngModel>
-    </div>
-    
-    <div class="form-group" class="inputField">
-        <p> Poem summary: </p>
-        <input type="text" id="summary" name="summary" #poemSummaryInput="ngModel" ngModel>
-    </div>
-    
-    <div class="form-group" class="inputField">
-        <p> Poem: </p>    
-        <textarea type="text" id="content" name="content" #poemContentInput="ngModel" ngModel cols="30" rows="10"></textarea>
-    </div>    
-    <button>Submit</button>
+  <div class="form-group" class="inputField">
+    <p>Poem title:</p>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      #poemTitleInput
+      ngModel
+      required
+      minlength="3"
+    />
+  </div>
+
+  <div class="form-group" class="inputField">
+    <p>Poem summary:</p>
+    <input
+      type="text"
+      id="summary"
+      name="summary"
+      #poemSummaryInput="ngModel"
+      ngModel
+      required
+      minlength="3"
+    />
+  </div>
+
+  <div class="form-group" class="inputField">
+    <p>Poem:</p>
+    <textarea
+      type="text"
+      id="content"
+      name="content"
+      #poemContentInput="ngModel"
+      ngModel
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div>
+  <button>Submit</button>
 </form>
