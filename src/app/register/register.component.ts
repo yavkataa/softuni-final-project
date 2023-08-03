@@ -38,7 +38,7 @@ export class RegisterComponent {
       username: string;
       password: string;
       rePassword: string;
-    } = form.value;    
+    } = form.value;
 
     this.api
       .registerUser(value.email, value.password, value.username)

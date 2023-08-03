@@ -64,7 +64,7 @@ export class PoemComponent implements OnInit {
     });
   }
 
-  deletePoem(): void {    
+  deletePoem(): void {
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
       this.router.navigate(['/']);

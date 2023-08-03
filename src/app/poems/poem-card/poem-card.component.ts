@@ -4,10 +4,9 @@ import { Poem } from 'src/app/types/poem';
 @Component({
   selector: 'app-poem-card',
   templateUrl: './poem-card.component.html',
-  styleUrls: ['./poem-card.component.css']
+  styleUrls: ['./poem-card.component.css'],
 })
 export class PoemCardComponent implements OnChanges {
-
   @Input() data: Poem = {
     title: '',
     summary: '',
@@ -17,6 +16,5 @@ export class PoemCardComponent implements OnChanges {
     _ownerId: '',
   };
 
-  ngOnChanges(changes: SimpleChanges): void { 
-  }
+  ngOnChanges(changes: SimpleChanges): void {}
 }

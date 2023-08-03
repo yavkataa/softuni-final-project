@@ -12,32 +12,31 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'poems',
-    component: PoemsComponent
-  },  
+    component: PoemsComponent,
+  },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [AuthLoginActivate]
+    canActivate: [AuthLoginActivate],
   },
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [AuthLoginActivate]
+    canActivate: [AuthLoginActivate],
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate: [AuthActivate]
-  }
- ];
+    canActivate: [AuthActivate],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

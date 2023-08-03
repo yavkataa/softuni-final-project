@@ -9,7 +9,7 @@ import { PoemsComponent } from './poems/poems.component';
 import { HomeComponent } from './home/home.component';
 import { PoemCardComponent } from './poems/poem-card/poem-card.component';
 import { NewPoemComponent } from './poems/new-poem/new-poem.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { PoemRoutingModule } from './poems/poems-routing.module';
 import { PoemComponent } from './poems/poem/poem.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
@@ -31,19 +31,18 @@ import { EditPoemComponent } from './poems/edit-poem/edit-poem.component';
     NavigationComponent,
     MyPoemsComponent,
     EditPoemComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    PoemRoutingModule,    
+    PoemRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    UserModule
-    
+    UserModule,
   ],
-  providers: [/* appInterceptorProvider */],
-  bootstrap: [AppComponent]
+  providers: [
+    /* appInterceptorProvider */
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

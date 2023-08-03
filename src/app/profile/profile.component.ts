@@ -25,13 +25,17 @@ export class ProfileComponent implements OnInit {
       error: (error) => {
         this.isLoading = false;
         this.userService.showMessage(error.error.message);
-        if (error.status = '403') {
+        if ((error.status = '403')) {
           this.userService.isLoggedIn = false;
-          this.router.navigate(['/'])
+          this.router.navigate(['/']);
         }
       },
     });
   }
 
-  constructor(private api: ApiService, private userService: UserService, private router: Router) {}
+  constructor(
+    private api: ApiService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 }
