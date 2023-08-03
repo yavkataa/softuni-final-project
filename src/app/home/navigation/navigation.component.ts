@@ -22,7 +22,6 @@ export class NavigationComponent implements OnInit {
     console.log('Logout successful!');
     this.router.navigate(['/']);
     this.userService.showMessage('Logged out successfully!');
-    
   }
 
   clearMessage(): void {

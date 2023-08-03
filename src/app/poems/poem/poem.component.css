@@ -47,3 +47,47 @@ button:hover {
     margin-top: 15px;
 
 }
+
+textarea {
+    max-width: 500px;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 10px 15px;    
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.inputField input {
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px 15px;    
+}
+
+@keyframes fade {
+    from {background-color: white;}
+    to {background-color: lightgray;}
+}
+
+
+
+label {
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+.messageField {
+    margin: 0 auto;
+    text-align: center;
+}

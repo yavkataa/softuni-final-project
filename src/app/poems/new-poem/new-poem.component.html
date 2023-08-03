@@ -5,11 +5,17 @@
       type="text"
       id="title"
       name="title"
-      #poemTitleInput
+      #poemTitleInput="ngModel"
       ngModel
       required
       minlength="3"
     />
+  </div>
+
+  <div *ngIf="poemTitleInput.touched" class="inputField">
+    <div *ngIf="poemTitleInput.errors?.['minlength']">
+      Title must be at least 3 characters!
+    </div>
   </div>
 
   <div class="form-group" class="inputField">
@@ -25,6 +31,12 @@
     />
   </div>
 
+  <div *ngIf="poemSummaryInput.touched" class="inputField">
+    <div *ngIf="poemSummaryInput.errors?.['minlength']">
+      Summary must be at least 3 characters!
+    </div>
+  </div>
+
   <div class="form-group" class="inputField">
     <p>Poem:</p>
     <textarea
@@ -35,7 +47,15 @@
       ngModel
       cols="30"
       rows="10"
+      minlength="1"
+      required
     ></textarea>
+
+    <div *ngIf="poemContentInput.touched" class="inputField">
+      <div *ngIf="poemContentInput.errors?.['required']">
+        Content cannot be empty!
+      </div>
+    </div>
   </div>
-  <button>Submit</button>
+  <button class="inputField">Submit</button>
 </form>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { UserService } from '../user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -24,9 +25,13 @@ export class ProfileComponent implements OnInit {
       error: (error) => {
         this.isLoading = false;
         this.userService.showMessage(error.error.message);
+        if (error.status = '403') {
+          this.userService.isLoggedIn = false;
+          this.router.navigate(['/'])
+        }
       },
     });
   }
 
-  constructor(private api: ApiService, private userService: UserService) {}
+  constructor(private api: ApiService, private userService: UserService, private router: Router) {}
 }

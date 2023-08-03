@@ -55,12 +55,12 @@ export class ApiService {
   storePoem(inputData: {}): Observable<any> {
     let requestData: any = inputData;
     requestData['_ownerId'] = localStorage.getItem('userId');
-    requestData['username'] = localStorage.getItem('username');    
+    requestData['username'] = localStorage.getItem('username');
 
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('X-Authorization', '' + localStorage.getItem('accessToken'));
-    
+
     return this.http.post(`${API_URL}/poems`, requestData, {
       headers: headers,
     });
@@ -84,6 +84,20 @@ export class ApiService {
       .set('X-Authorization', '' + localStorage.getItem('accessToken'));
 
     return this.http.delete(`${API_URL}/poems/${id}`, {
+      headers: headers,
+    });
+  }
+
+  updatePoem(id: string, inputData: {}): Observable<any> {
+    let requestData: any = inputData;
+    requestData['_ownerId'] = localStorage.getItem('userId');
+    requestData['username'] = localStorage.getItem('username');
+
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('X-Authorization', '' + localStorage.getItem('accessToken'));
+
+    return this.http.put(`${API_STORE_URL}/poems/${id}`, requestData, {
       headers: headers,
     });
   }

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/user/user.service';
   templateUrl: './new-poem.component.html',
   styleUrls: ['./new-poem.component.css'],
 })
-export class NewPoemComponent {
+export class NewPoemComponent implements OnInit {
   @ViewChild('newPoemForm') newPoemForm: NgForm | undefined;
 
   submitHandler(): void {
@@ -23,7 +23,6 @@ export class NewPoemComponent {
 
     let submitData: { title: string; summary: string; content: string } =
       form.value;
-     
 
     this.api.storePoem(submitData).subscribe({
       next: (response) => {
@@ -41,4 +40,11 @@ export class NewPoemComponent {
     private router: Router,
     private userService: UserService
   ) {}
+
+  ngOnInit(): void {
+    if (!localStorage.getItem('accessToken')) {
+      this.userService.isLoggedIn = false;
+      this.router.navigate(['/']);
+    }
+  }
 }
