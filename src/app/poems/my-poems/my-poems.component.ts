@@ -20,6 +20,8 @@ export class MyPoemsComponent implements OnInit {
     this.fetchMyPoems(user);
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
+      this.api.clearSessionData();
+      this.userService.username = null;
       this.router.navigate(['/']);
     }
   }

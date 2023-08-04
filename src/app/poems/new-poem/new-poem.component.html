@@ -12,9 +12,15 @@
     />
   </div>
 
-  <div *ngIf="poemTitleInput.touched" class="inputField">
+  <div *ngIf="poemTitleInput.touched" class="inputField error">
     <div *ngIf="poemTitleInput.errors?.['minlength']">
       Title must be at least 3 characters!
+    </div>
+  </div>
+
+  <div *ngIf="poemTitleInput.touched" class="inputField error">
+    <div *ngIf="poemTitleInput.errors?.['required']">
+      Title is required
     </div>
   </div>
 
@@ -31,9 +37,15 @@
     />
   </div>
 
-  <div *ngIf="poemSummaryInput.touched" class="inputField">
+  <div *ngIf="poemSummaryInput.touched" class="inputField error">
     <div *ngIf="poemSummaryInput.errors?.['minlength']">
       Summary must be at least 3 characters!
+    </div>
+  </div>
+
+  <div *ngIf="poemSummaryInput.touched" class="inputField error">
+    <div *ngIf="poemSummaryInput.errors?.['required']">
+      Summary is required! 
     </div>
   </div>
 
@@ -51,7 +63,7 @@
       required
     ></textarea>
 
-    <div *ngIf="poemContentInput.touched" class="inputField">
+    <div *ngIf="poemContentInput.touched" class="inputField error">
       <div *ngIf="poemContentInput.errors?.['required']">
         Content cannot be empty!
       </div>

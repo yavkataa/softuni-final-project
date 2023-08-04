@@ -27,6 +27,7 @@ export class ProfileComponent implements OnInit {
         this.userService.showMessage(error.error.message);
         if ((error.status = '403')) {
           this.userService.isLoggedIn = false;
+          this.userService.username = null;
           this.router.navigate(['/']);
         }
       },

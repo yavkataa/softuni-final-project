@@ -14,7 +14,7 @@
   </div>
 
   <!-- Email error message -->
-  <div *ngIf="emailInput.touched" class="inputField">
+  <div *ngIf="emailInput.touched" class="inputField error">
     <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
     <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
   </div>
@@ -34,16 +34,16 @@
     />
   </div>
 
-  <div *ngIf="usernameInput.touched" class="inputField">
+  <div *ngIf="usernameInput.touched" class="inputField error">
     <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
   </div>
 
-  <div *ngIf="usernameInput.touched" class="inputField">
+  <div *ngIf="usernameInput.touched" class="inputField error">
     <div *ngIf="usernameInput.errors?.['minlength']">
       Username must be 4 or more characters long!
     </div>
   </div>
-  <div *ngIf="usernameInput.touched" class="inputField">
+  <div *ngIf="usernameInput.touched" class="inputField error">
     <div *ngIf="usernameInput.errors?.['maxlength']">
       Username must be 16 characters at most!
     </div>
@@ -72,7 +72,7 @@
       Password must be 32 characters at most!
     </p>
 
-    <div *ngIf="passwordInput.touched" class="inputField">
+    <div *ngIf="passwordInput.touched" class="inputField error">
       <div *ngIf="passwordInput.errors?.['required']">
         Password is required!
       </div>
@@ -90,7 +90,7 @@
       />
     </div>
 
-    <div *ngIf="passwordInput.touched" class="inputField">
+    <div *ngIf="passwordInput.touched" class="inputField error">
       <div *ngIf="!passwordInput.errors?.['matchPasswordsValidator']">
         Passwords must match!
       </div>

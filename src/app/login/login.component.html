@@ -6,14 +6,14 @@
     </div>
 
     <!-- Email error message -->
-    <div *ngIf="emailInput.touched" class="messageField">
+    <div *ngIf="emailInput.touched" class="messageField error" >
         <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
         <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
     </div>
     
 
     <!-- Password -->
-    <div class="form-group" class="inputField">
+    <div class="form-group" class="inputField ">
         <p>Password: </p>
         <input 
         type="password"

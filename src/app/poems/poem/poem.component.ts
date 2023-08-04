@@ -67,6 +67,8 @@ export class PoemComponent implements OnInit {
   deletePoem(): void {
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
+      this.userService.showMessage('Login session expired!')
+      this.userService.username = null;
       this.router.navigate(['/']);
     }
 
@@ -85,7 +87,9 @@ export class PoemComponent implements OnInit {
 
   toggleEditing(): void {
     if (!localStorage.getItem('accessToken')) {
+      this.userService.showMessage('Login session expired!');
       this.userService.isLoggedIn = false;
+      this.userService.username = null;
       this.router.navigate(['/']);
     }
 

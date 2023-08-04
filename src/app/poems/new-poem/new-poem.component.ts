@@ -21,6 +21,14 @@ export class NewPoemComponent implements OnInit {
       return;
     }
 
+    if (!localStorage.getItem('accessToken')) {
+      this.userService.isLoggedIn = false;
+      this.api.clearSessionData();
+      this.userService.showMessage('Login session expired!');
+      this.userService.username = null;
+      this.router.navigate(['/']);
+    }
+
     let submitData: { title: string; summary: string; content: string } =
       form.value;
 

@@ -58,3 +58,8 @@ label {
     margin: 0 auto;
     text-align: center;
 }
+
+.error {
+    color: red;
+    padding: 5px;
+}

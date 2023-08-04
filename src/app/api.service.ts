@@ -41,7 +41,7 @@ export class ApiService {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userId');
-    localStorage.removeItem('');
+    localStorage.removeItem('username');  
   }
 
   getProfileInfo(): Observable<any> {
