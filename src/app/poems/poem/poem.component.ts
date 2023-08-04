@@ -21,16 +21,7 @@ export class PoemComponent implements OnInit {
     _ownerId: '',
     username: '',
   };
-
-  poemDataBuffer: Poem = {
-    content: '',
-    summary: '',
-    title: '',
-    _id: '',
-    _ownerId: '',
-    username: '',
-  };
-
+  
   isLoading = false;
   loggedInUser: string | null = '';
   editingPoem: boolean = false;
