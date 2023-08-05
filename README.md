@@ -6,4 +6,5 @@ As seen in https://github.com/softuni-practice-server/softuni-practice-server
 To start the server, open CMD in root inventory and run "node server.js"
 
 # Features
-Register/Login, Create and Delete Poems, Browse Poems
+Register/Login, Create, Edit and Delete Poems
+Guests can Browse existing Poems

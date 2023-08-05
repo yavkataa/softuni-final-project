@@ -16,11 +16,10 @@ div {
 }
 
 button {
-    padding: 10px 100px;
+    padding: 10px;
     border-radius: 15px;    
     margin: 0 auto;
-    cursor: pointer;    
-    margin: 0 10px;
+    cursor: pointer;  
     
 }
 
@@ -46,6 +45,12 @@ button:hover {
     margin: 0 auto;
     margin-top: 15px;
 
+}
+
+.controls button {    
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 textarea {
