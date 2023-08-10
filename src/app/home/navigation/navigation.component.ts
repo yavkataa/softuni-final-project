@@ -13,7 +13,7 @@ export class NavigationComponent implements OnInit {
     public userService: UserService,
     private router: Router,
     private api: ApiService
-  ) {}
+  ) {}  
 
   logout(): void {
     this.userService.isLoggedIn = false;
@@ -32,5 +32,5 @@ export class NavigationComponent implements OnInit {
     if (localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = true;
     }
-  }
+  }  
 }

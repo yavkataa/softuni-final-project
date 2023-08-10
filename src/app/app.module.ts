@@ -15,7 +15,6 @@ import { PoemComponent } from './poems/poem/poem.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { MyPoemsComponent } from './poems/my-poems/my-poems.component';
 import { UserModule } from './user/user/user.module';
-import { EditPoemComponent } from './poems/edit-poem/edit-poem.component';
 
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
@@ -30,7 +29,6 @@ import { EditPoemComponent } from './poems/edit-poem/edit-poem.component';
     PoemComponent,
     NavigationComponent,
     MyPoemsComponent,
-    EditPoemComponent,
   ],
   imports: [
     BrowserModule,

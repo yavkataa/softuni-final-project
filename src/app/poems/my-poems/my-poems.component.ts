@@ -28,9 +28,8 @@ export class MyPoemsComponent implements OnInit {
 
   fetchMyPoems(userId: string | null): Poem[] | null {
     if (userId != null) {
-      const user = localStorage.getItem('userId');
       this.isLoading = true;
-      this.api.getUserPoems(user).subscribe({
+      this.api.getUserPoems(userId).subscribe({
         next: (response) => {
           this.poemsList = response;
           this.isLoading = false;

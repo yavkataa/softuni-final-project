@@ -15,13 +15,7 @@ div {
     text-align: left;
 }
 
-button {
-    padding: 10px;
-    border-radius: 15px;    
-    margin: 0 auto;
-    cursor: pointer;  
-    
-}
+
 
 button:hover {
     animation-name: fade;
@@ -47,10 +41,16 @@ button:hover {
 
 }
 
-.controls button {    
+.controls button, button {    
     text-align: center;
     margin: 0 auto;
     width: fit-content;
+    outline: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;    
+    margin: 0 auto;
+    cursor: pointer;  
 }
 
 textarea {
@@ -95,4 +95,8 @@ label {
 .messageField {
     margin: 0 auto;
     text-align: center;
+}
+
+.view-poem {
+    padding-bottom: 32px;
 }
