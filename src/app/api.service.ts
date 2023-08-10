@@ -33,6 +33,7 @@ export class ApiService {
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${LOGIN_URL}`, { email: email, password: password });
   }
+  
   dataSave(key: string, value: string): void {
     localStorage.setItem(key, value);
   }
