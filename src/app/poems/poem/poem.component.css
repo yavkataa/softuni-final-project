@@ -4,6 +4,7 @@
   width: fit-content;
   margin: 0 auto;
   white-space: pre-wrap;
+  padding: 15px;
 }
 
 div {
@@ -60,6 +61,7 @@ textarea {
   min-height: 200px;
   border-radius: 10px;
   padding: 10px 15px;
+  margin-bottom: 15px;
 }
 
 p {
@@ -78,6 +80,10 @@ form {
   width: 200px;
   border-radius: 10px;
   padding: 10px 15px;
+}
+
+.inputField p {
+  padding: 10px;
 }
 
 @keyframes fade {
@@ -101,4 +107,19 @@ label {
 
 .view-poem {
   padding-bottom: 32px;
+}
+
+h1,
+h3,
+h5,
+.content {
+  padding: 10px 25px;
+  background-color: lightgray;
+  border-radius: 18px;
+  width: fit-content;
+  margin: 5px auto;
+}
+
+.content {
+  padding: 25px;
 }

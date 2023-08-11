@@ -29,6 +29,10 @@ form {
   padding: 10px 15px;
 }
 
+.inputField p {
+  padding: 10px;
+}
+
 button {
   padding: 10px 100px;
   border-radius: 15px;

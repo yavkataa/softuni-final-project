@@ -46,3 +46,7 @@ label {
   color: red;
   padding: 5px;
 }
+
+.inputField p {
+  padding: 10px;
+}

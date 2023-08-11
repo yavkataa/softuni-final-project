@@ -1,12 +1,17 @@
 .inputField {
   display: block;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .inputField input {
   width: 200px;
   border-radius: 10px;
   padding: 10px 15px;
+}
+
+.inputField p {
+  padding: 10px;
 }
 
 button {

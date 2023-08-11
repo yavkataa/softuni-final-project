@@ -4,4 +4,9 @@
 
 .title {
   font-weight: bold;
+  padding: 8px;
+}
+
+p  {
+    padding: 8px;
 }
