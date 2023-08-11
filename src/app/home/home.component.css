@@ -1,36 +1,36 @@
 p {
-    text-align: center;
+  text-align: center;
 }
 
 span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 span:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 div {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .container {
-    margin-top: 32px;;
+  margin-top: 32px;
 }
 
 .highlight {
-    background-color: lightgray;
-    padding: 5px;
-    border-radius: 8px;
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 8px;
 }
 
 .highlight:hover {
-    background-color: lightgray;
-    padding: 5px;
-    border-radius: 8px;
-    background-color: darkgray;
-    color: white;
-    transition-property: background-color;
-    transition-duration: 100ms;
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: darkgray;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 100ms;
 }

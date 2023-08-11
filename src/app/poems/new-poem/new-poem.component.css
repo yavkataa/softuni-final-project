@@ -1,65 +1,67 @@
 textarea {
-    max-width: 500px;
-    min-width: 200px;
-    min-height: 200px;
-    border-radius: 10px;
-    padding: 10px 15px;    
+  max-width: 500px;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
-
 .inputField {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .inputField input {
-    width: 200px;
-    border-radius: 10px;
-    padding: 10px 15px;    
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 button {
-    padding: 10px 100px;
-    border-radius: 15px;    
-    margin: 50px auto;
+  padding: 10px 100px;
+  border-radius: 15px;
+  margin: 50px auto;
 }
 
 @keyframes fade {
-    from {background-color: white;}
-    to {background-color: lightgray;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: lightgray;
+  }
 }
 
 button:hover {
-    animation-name: fade;
-    animation-duration: 100ms;
-    background-color: lightgray;
-    cursor: pointer;
+  animation-name: fade;
+  animation-duration: 100ms;
+  background-color: lightgray;
+  cursor: pointer;
 }
 
 label {
-    font-weight: bold;
-    padding: 15px;
+  font-weight: bold;
+  padding: 15px;
 }
 
-
 .messageField {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .error {
-    color: red;
-    padding: 5px;
+  color: red;
+  padding: 5px;
 }

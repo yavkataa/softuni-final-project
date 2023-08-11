@@ -1,30 +1,35 @@
 <form #loginForm="ngForm" (ngSubmit)="submitHandler()">
-    <!-- Email -->
-    <div class="form-group" class="inputField">
-        <p for="email">Email: </p>
-        <input type="email" id="email" name="email" ngModel email required #emailInput="ngModel"/>
-    </div>
+  <!-- Email -->
+  <div class="form-group" class="inputField">
+    <p for="email">Email:</p>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      ngModel
+      email
+      required
+      #emailInput="ngModel"
+    />
+  </div>
 
-    <!-- Email error message -->
-    <div *ngIf="emailInput.touched" class="messageField error" >
-        <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
-        <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
-    </div>
-    
+  <!-- Email error message -->
+  <div *ngIf="emailInput.touched" class="messageField error">
+    <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+    <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
+  </div>
 
-    <!-- Password -->
-    <div class="form-group" class="inputField ">
-        <p>Password: </p>
-        <input 
-        type="password"
-        id="password" 
-        name="password" 
-        ngModel 
-        #passwordInput="ngModel" 
-        />
-    </div>
+  <!-- Password -->
+  <div class="form-group" class="inputField">
+    <p>Password:</p>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      ngModel
+      #passwordInput="ngModel"
+    />
+  </div>
 
-   
-    
-    <button class="inputField">Login</button>
+  <button class="inputField">Login</button>
 </form>

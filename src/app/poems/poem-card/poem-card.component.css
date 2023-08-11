@@ -1,51 +1,56 @@
-
-.card {    
-    max-width: 300px;
-    display: inline-block;
-    border-radius: 32px;
-    padding: 10px;
-    text-align: left;
-    background-color: lightgray;    
-    margin: 10px;
-    padding-bottom: 30px;
+.card {
+  max-width: 300px;
+  display: inline-block;
+  border-radius: 32px;
+  padding: 10px;
+  text-align: left;
+  background-color: lightgray;
+  margin: 10px;
+  padding-bottom: 30px;
 }
 
 @keyframes fade {
-    from {background-color: lightgray; color: black}
-    to {background-color: darkgray; color: white;}
+  from {
+    background-color: lightgray;
+    color: black;
   }
-
-.card:hover {
+  to {
     background-color: darkgray;
     color: white;
-    animation-name: fade;
-    animation-duration: 100ms;   
-    cursor: pointer;  
+  }
+}
+
+.card:hover {
+  background-color: darkgray;
+  color: white;
+  animation-name: fade;
+  animation-duration: 100ms;
+  cursor: pointer;
 }
 
 .card div {
-    padding: 2px;
+  padding: 2px;
 }
 
 span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 #content {
-    max-height: 250px;
-    overflow: hidden;    
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
+  max-height: 250px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
 }
 
 h1 {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #Author {
-    overflow: hidden;
-} 
+  overflow: hidden;
+}

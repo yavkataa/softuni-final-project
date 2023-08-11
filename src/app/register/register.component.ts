@@ -29,7 +29,6 @@ export class RegisterComponent {
 
     if (form.value.password !== form.value.rePassword) {
       this.userService.showMessage("The passwords don't match!");
-
       return;
     }
 

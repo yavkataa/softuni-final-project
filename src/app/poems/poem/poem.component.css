@@ -1,102 +1,104 @@
 .poem {
-    text-align: center;
-    max-width: 500px;
-    width: fit-content;
-    margin: 0 auto;
-    white-space: pre-wrap;
+  text-align: center;
+  max-width: 500px;
+  width: fit-content;
+  margin: 0 auto;
+  white-space: pre-wrap;
 }
 
 div {
-    overflow: auto;
+  overflow: auto;
 }
 
 .content {
-
-    text-align: left;
+  text-align: left;
 }
 
-
-
 button:hover {
-    animation-name: fade;
-    animation-duration: 100ms;
-    background-color: lightgray;
-    cursor: pointer;
+  animation-name: fade;
+  animation-duration: 100ms;
+  background-color: lightgray;
+  cursor: pointer;
 }
 
 @keyframes fade {
-    from {background-color: white;}
-    to {background-color: lightgray;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: lightgray;
+  }
 }
 
 .inputField {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .controls {
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 15px;
-
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
-.controls button, button {    
-    text-align: center;
-    margin: 0 auto;
-    width: fit-content;
-    outline: none;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;    
-    margin: 0 auto;
-    cursor: pointer;  
+.controls button,
+button {
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
+  outline: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 textarea {
-    max-width: 500px;
-    min-width: 200px;
-    min-height: 200px;
-    border-radius: 10px;
-    padding: 10px 15px;    
+  max-width: 500px;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .inputField input {
-    width: 200px;
-    border-radius: 10px;
-    padding: 10px 15px;    
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 @keyframes fade {
-    from {background-color: white;}
-    to {background-color: lightgray;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: lightgray;
+  }
 }
-
-
 
 label {
-    font-weight: bold;
-    padding: 15px;
+  font-weight: bold;
+  padding: 15px;
 }
 
-
 .messageField {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .view-poem {
-    padding-bottom: 32px;
+  padding-bottom: 32px;
 }

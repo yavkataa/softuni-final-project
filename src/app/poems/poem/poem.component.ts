@@ -21,7 +21,7 @@ export class PoemComponent implements OnInit {
     _ownerId: '',
     username: '',
   };
-  
+
   isLoading = false;
   loggedInUser: string | null = '';
   editingPoem: boolean = false;
@@ -42,7 +42,6 @@ export class PoemComponent implements OnInit {
 
   fetchPoem(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    const form = this.editPoemForm;
 
     this.apiService.getPoem(id).subscribe({
       next: (response) => {
@@ -58,7 +57,7 @@ export class PoemComponent implements OnInit {
   deletePoem(): void {
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
-      this.userService.showMessage('Login session expired!')
+      this.userService.showMessage('Login session expired!');
       this.userService.username = null;
       this.router.navigate(['/']);
     }

@@ -42,11 +42,11 @@ export class LoginComponent {
 
           console.log('Login successful!');
           this.router.navigate(['/']);
-          this.userService.showMessage('Logged in successfully!');          
+          this.userService.showMessage('Logged in successfully!');
         }
       },
       error: (error) => {
-        this.userService.showMessage(error.error.message);        
+        this.userService.showMessage(error.error.message);
       },
     });
   }

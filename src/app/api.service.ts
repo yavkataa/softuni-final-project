@@ -33,7 +33,7 @@ export class ApiService {
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${LOGIN_URL}`, { email: email, password: password });
   }
-  
+
   dataSave(key: string, value: string): void {
     localStorage.setItem(key, value);
   }
@@ -42,7 +42,7 @@ export class ApiService {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userId');
-    localStorage.removeItem('username');  
+    localStorage.removeItem('username');
   }
 
   getProfileInfo(): Observable<any> {
