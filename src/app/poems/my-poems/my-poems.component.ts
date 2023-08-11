@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Poem } from 'src/app/types/poem';
 import { UserService } from 'src/app/user/user.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-poems',
@@ -13,17 +13,21 @@ export class MyPoemsComponent implements OnInit {
   poemsList: Poem[] = [];
   isLoading: boolean = false;
 
-  constructor(private api: ApiService, private userService: UserService, private router: Router) {}
+  constructor(
+    private api: ApiService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    const user = localStorage.getItem('userId');
-    this.fetchMyPoems(user);
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
       this.api.clearSessionData();
       this.userService.username = null;
       this.router.navigate(['/']);
     }
+    const user = localStorage.getItem('userId');
+    this.fetchMyPoems(user);
   }
 
   fetchMyPoems(userId: string | null): Poem[] | null {
@@ -40,9 +44,6 @@ export class MyPoemsComponent implements OnInit {
         },
       });
     }
-
     return null;
   }
-
-  
 }
