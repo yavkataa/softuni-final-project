@@ -35,3 +35,7 @@ div {
   transition-property: background-color;
   transition-duration: 100ms;
 }
+
+#login-bar {
+    line-height: 32px;
+}
